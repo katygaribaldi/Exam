@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cancionero!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  </head>
+
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Cancionero - Yeah Yeah Yeahs
+      </h1>
+      <p class="subtitle">
+        Lista de canciones del EP: "Yeah Yeah Yeahs" (2001)
+      </p>
+
+      <p>
+        %{lista_canciones}
+      </p>
+      
+      <section class="section">
+        <form action='/cancion' method="POST">
+          <input type="text" name="canciones_name">
+          <input type="text" name="cancion_lyrics">
+          <input type="submit" value="Save Song">
+        </form>
+      </section>
+
+    </div>
+  </section>
+  </body>
+</html>
